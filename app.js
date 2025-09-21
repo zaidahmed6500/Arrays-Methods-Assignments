@@ -34,10 +34,7 @@ console.log(newAnimals)
 // 5
 const task = ["task1", "task2","task3"];
 
-const taskDone = task.map(item => {
-  item === task;
-  return "Done"
-})
+const taskDone = task.map(item => `${item}-Done`)
 console.log(taskDone)
 
 
@@ -49,14 +46,36 @@ console.log(newSquare)
 
 
 // 7
+// const price = [10, 20, 30, 40, 50];
+// const strPrice = price.map(item => item.toString()).map(item => {
+//   for(let i=0; i<price.length; i++){
+//     return `$${item[i]}`
+//   }
+// }
+// )
+// console.log(strPrice)
 const price = [10, 20, 30, 40, 50];
-const strPrice = price.map(item => item.toString()).map(item => {
-  for(let i=0; i<price.length; i++){
-    return `$${item[i]}`
-  }
-}
-)
-console.log(strPrice)
+const priceWithSign = price.map(item => `$${item}`)
+console.log(priceWithSign)
+
+
+
+// 8
+const dates = [
+  "2025-09-22",
+  "2025-10-01",
+  "2025-12-25"
+];
+const formattedDates = dates.map(item => new Date(item).toDateString())
+console.log(formattedDates)
+
+
+
+
+// 9
+const  evenNumbers = [1,2,3,4,5,6,7,8,9,10]
+const isEven = evenNumbers.map(item => item % 2 === 0)
+console.log(isEven)
 
 
 
@@ -90,13 +109,8 @@ console.log(greaterNames)
 const active = [{name: "Alice", active: true}, 
                 {name: "Bob", active: false}];
 
-const activeUser = active.filter(item => {
-  if(item.active == true){
-    return item + " Active"
-  }
-})
+const activeUser = active.filter(item => item.active)
 console.log(activeUser)
-
 
 
 // 15 under construction
